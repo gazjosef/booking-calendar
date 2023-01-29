@@ -1,8 +1,17 @@
 .container {
   margin: 0;
-  width: 100%;
+  height: 100%;
   max-width: 102.4rem;
-  background-color: red;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // & > * {
+  //   display: grid;
+  //   place-content: center;
+  // }
 
   // @include respond(desktop) {
   //   max-width: 120rem;

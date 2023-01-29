@@ -5,6 +5,8 @@ import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
+import Navbar from "@/components/Layout/Navbar";
+
 export default function Home() {
   return (
     <>
@@ -15,6 +17,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <header>
+          <Navbar />
+        </header>
         <h1>Hello World</h1>
       </main>
     </>

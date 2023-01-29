@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { FaBed } from "react-icons/fa";
 // import Image from "next/image";
 // import { Inter } from "@next/font/google";
 // import styles from "@/styles/Home.module.css";
@@ -18,6 +19,13 @@ export default function Home() {
       </Head>
       <main>
         <Header />
+        <section className="hero">
+          <div className="hero__list">
+            <div className="hero__list-item">
+              <FaBed className="hero__bed" />
+            </div>
+          </div>
+        </section>
         <h1>Hello World</h1>
       </main>
     </>

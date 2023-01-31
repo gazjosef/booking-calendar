@@ -2,7 +2,6 @@ import Head from "next/head";
 import { FaBed, FaPlane, FaCar, FaTaxi } from "react-icons/fa";
 // import Image from "next/image";
 // import { Inter } from "@next/font/google";
-// import styles from "@/styles/Home.module.css";
 
 // const inter = Inter({ subsets: ["latin"] });
 

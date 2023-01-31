@@ -1,7 +1,13 @@
-.header {
-  height: 5rem;
-  background-color: $clr-blue;
+// header {
+//   min-width: 100%;
 
-  display: grid;
-  place-items: center;
+//   display: grid;
+//   place-content: center;
+// }
+
+.header {
+  height: 15rem;
+  padding: 1rem;
+
+  position: relative;
 }

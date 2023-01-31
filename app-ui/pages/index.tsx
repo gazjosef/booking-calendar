@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { FaBed } from "react-icons/fa";
+import { FaBed, FaPlane, FaCar, FaTaxi } from "react-icons/fa";
 // import Image from "next/image";
 // import { Inter } from "@next/font/google";
 // import styles from "@/styles/Home.module.css";
@@ -19,14 +19,46 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <section className="hero">
-          <div className="hero__list">
-            <div className="hero__list-item">
-              <FaBed className="hero__bed" />
+        {/* <section className="hero | u-bg-blue u-text-white">
+          <div className="container">
+            <div className="hero__list">
+              <div className="hero__list-item active">
+                <FaBed className="hero__list-icon" />
+                <span>Stays</span>
+              </div>
+              <div className="hero__list-item">
+                <FaPlane className="hero__list-icon" />
+                <span>Flights</span>
+              </div>
+              <div className="hero__list-item">
+                <FaCar className="hero__list-icon" />
+                <span>Car Rentals</span>
+              </div>
+              <div className="hero__list-item">
+                <FaBed className="hero__list-icon" />
+                <span>Attractions</span>
+              </div>
+              <div className="hero__list-item">
+                <FaTaxi className="hero__list-icon" />
+                <span>Airport Taxis</span>
+              </div>
             </div>
           </div>
-        </section>
-        <h1>Hello World</h1>
+          <div className="container">
+            <h1 className="hero__tile">
+              A lifetime of discounts? It&lsquo;s a genius
+            </h1>
+
+            <p className="hero__desc">
+              Get rewarded for your travels - unlock instant savings of 10% or
+              more with a free Lamabooking account
+            </p>
+
+            <button className="hero__btn | u-bg-blue-200 u-text-white">
+              Sign In / Register
+            </button>
+          </div>
+        </section> */}
       </main>
     </>
   );

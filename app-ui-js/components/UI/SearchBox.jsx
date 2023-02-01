@@ -6,6 +6,8 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 
 export default function SearchBox() {
+  const [openDate, setOpenDate] = useState(false);
+
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -26,17 +28,22 @@ export default function SearchBox() {
       </div>
       <div className="searchBox__item">
         <FaCalendarAlt className="searchBox__icon" />
-        <span className="searchBox__text">{`${format(
-          date[0].startDate,
+        <span
+          onClick={() => setOpenDate(!openDate)}
+          className="searchBox__text"
+        >{`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(
+          date[0].endDate,
           "dd/MM/yyyy"
-        )} to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
-        <DateRange
-          editableDateInputs={true}
-          onChange={(item) => setDate([item.selection])}
-          moveRangeOnFirstSelection={false}
-          ranges={date}
-          className="searchBox__date"
-        />
+        )}`}</span>
+        {openDate && (
+          <DateRange
+            editableDateInputs={true}
+            onChange={(item) => setDate([item.selection])}
+            moveRangeOnFirstSelection={false}
+            ranges={date}
+            className="searchBox__date"
+          />
+        )}
       </div>
       <div className="searchBox__item">
         <FaUser className="searchBox__icon" />

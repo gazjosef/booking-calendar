@@ -16,6 +16,13 @@ export default function SearchBox() {
     },
   ]);
 
+  const [openOptions, setOpenOptions] = useState(false);
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  });
+
   return (
     <div className="searchBox | u-flex u-align-center u-justify-around | u-bg-white u-text-black">
       <div className="searchBox__item">
@@ -47,7 +54,33 @@ export default function SearchBox() {
       </div>
       <div className="searchBox__item">
         <FaUser className="searchBox__icon" />
-        <span className="searchBox__text">2 Adults 2 Children 1 Room</span>
+        <span className="searchBox__text">{`${options.adult} adult • ${options.children} children • ${options.room} room`}</span>
+        <div className="option">
+          <div className="option__item">
+            <span className="option__text">Adult</span>
+            <div className="option__counter">
+              <button className="option__btn">-</button>
+              <span className="option__number">1</span>
+              <button className="option__btn">+</button>
+            </div>
+          </div>
+          <div className="option__item">
+            <span className="option__text">Children</span>
+            <div className="option__counter">
+              <button className="option__btn">-</button>
+              <span className="option__number">0</span>
+              <button className="option__btn">+</button>
+            </div>
+          </div>
+          <div className="option__item">
+            <span className="option__text">Room</span>
+            <div className="option__counter">
+              <button className="option__btn">-</button>
+              <span className="option__number">1</span>
+              <button className="option__btn">+</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="searchBox__item">
         <button className="searchBox__btn | u-bg-blue-200 u-text-white">

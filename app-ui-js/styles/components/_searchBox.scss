@@ -40,3 +40,39 @@
     top: 5rem;
   }
 }
+
+.option {
+  position: absolute;
+  top: 5rem;
+  background-color: $clr-white;
+  color: grey;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 1rem -0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1rem -0.5rem rgba(0, 0, 0, 0.4);
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    color: $clr-black;
+    font-size: 1.2rem;
+  }
+
+  &__item {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid $clr-blue-200;
+    height: 3rem;
+    width: 3rem;
+
+    color: $clr-blue-200;
+  }
+}

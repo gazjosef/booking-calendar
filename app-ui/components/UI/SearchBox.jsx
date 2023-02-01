@@ -27,12 +27,12 @@ export default function SearchBox() {
       <div className="searchBox__item">
         <FaCalendarAlt className="searchBox__icon" />
         <span className="searchBox__text">Date to Date</span>
-        {/* <DateRange
+        <DateRange
           editableDateInputs={true}
-          onChange={(item: RangeKeyDict) => setDate([item.selection])}
+          onChange={(item) => setDate([item.selection])}
           moveRangeOnFirstSelection={false}
           ranges={date}
-        /> */}
+        />
       </div>
       <div className="searchBox__item">
         <FaUser className="searchBox__icon" />

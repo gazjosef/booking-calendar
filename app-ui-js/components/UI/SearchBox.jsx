@@ -3,12 +3,13 @@ import { FaBed, FaCalendarAlt, FaUser } from "react-icons/fa";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import { format } from "date-fns";
 
 export default function SearchBox() {
   const [date, setDate] = useState([
     {
       startDate: new Date(),
-      endDate: null,
+      endDate: new Date(),
       key: "selection",
     },
   ]);
@@ -25,7 +26,10 @@ export default function SearchBox() {
       </div>
       <div className="searchBox__item">
         <FaCalendarAlt className="searchBox__icon" />
-        <span className="searchBox__text">Date to Date</span>
+        <span className="searchBox__text">{`${format(
+          date[0].startDate,
+          "dd/MM/yyyy"
+        )} to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
         <DateRange
           editableDateInputs={true}
           onChange={(item) => setDate([item.selection])}

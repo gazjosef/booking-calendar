@@ -23,6 +23,15 @@ export default function SearchBox() {
     room: 1,
   });
 
+  const handleOption = (name, operation) => {
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+    });
+  };
+
   return (
     <div className="searchBox | u-flex u-align-center u-justify-around | u-bg-white u-text-black">
       <div className="searchBox__item">
@@ -59,25 +68,55 @@ export default function SearchBox() {
           <div className="option__item">
             <span className="option__text">Adult</span>
             <div className="option__counter">
-              <button className="option__btn">-</button>
-              <span className="option__number">1</span>
-              <button className="option__btn">+</button>
+              <button
+                className="option__btn"
+                onClick={() => handleOption("adult", "d")}
+              >
+                -
+              </button>
+              <span className="option__number">{options.adult}</span>
+              <button
+                className="option__btn"
+                onClick={() => handleOption("adult", "i")}
+              >
+                +
+              </button>
             </div>
           </div>
           <div className="option__item">
             <span className="option__text">Children</span>
             <div className="option__counter">
-              <button className="option__btn">-</button>
-              <span className="option__number">0</span>
-              <button className="option__btn">+</button>
+              <button
+                className="option__btn"
+                onClick={() => handleOption("children", "d")}
+              >
+                -
+              </button>
+              <span className="option__number">{options.children}</span>
+              <button
+                className="option__btn"
+                onClick={() => handleOption("children", "i")}
+              >
+                +
+              </button>
             </div>
           </div>
           <div className="option__item">
             <span className="option__text">Room</span>
             <div className="option__counter">
-              <button className="option__btn">-</button>
-              <span className="option__number">1</span>
-              <button className="option__btn">+</button>
+              <button
+                className="option__btn"
+                onClick={() => handleOption("room", "d")}
+              >
+                -
+              </button>
+              <span className="option__number">{options.room}</span>
+              <button
+                className="option__btn"
+                onClick={() => handleOption("room", "i")}
+              >
+                +
+              </button>
             </div>
           </div>
         </div>

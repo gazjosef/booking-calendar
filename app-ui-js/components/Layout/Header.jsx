@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header | u-bg-blue u-text-white">
       <div className="container | u-flex u-items-center u-justify-between">
         <div className="header__logo | u-fs-500 u-fw-bold u-text-uppercase">
-          <span>L&lsquo;heude Bookings</span>
+          <span>Lheude Bookings</span>
         </div>
         <div className="header__items">
           <button className="btn">Register</button>

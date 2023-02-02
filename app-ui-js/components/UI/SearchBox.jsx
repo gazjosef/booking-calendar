@@ -63,63 +63,72 @@ export default function SearchBox() {
       </div>
       <div className="searchBox__item">
         <FaUser className="searchBox__icon" />
-        <span className="searchBox__text">{`${options.adult} adult • ${options.children} children • ${options.room} room`}</span>
-        <div className="option">
-          <div className="option__item">
-            <span className="option__text">Adult</span>
-            <div className="option__counter">
-              <button
-                className="option__btn"
-                onClick={() => handleOption("adult", "d")}
-              >
-                -
-              </button>
-              <span className="option__number">{options.adult}</span>
-              <button
-                className="option__btn"
-                onClick={() => handleOption("adult", "i")}
-              >
-                +
-              </button>
+        <span
+          onClick={() => setOpenOptions(!openOptions)}
+          className="searchBox__text"
+        >{`${options.adult} adult • ${options.children} children • ${options.room} room`}</span>
+
+        {openOptions && (
+          <div className="option">
+            <div className="option__item">
+              <span className="option__text">Adult</span>
+              <div className="option__counter">
+                <button
+                  disabled={options.adult <= 1}
+                  className="option__btn"
+                  onClick={() => handleOption("adult", "d")}
+                >
+                  -
+                </button>
+                <span className="option__number">{options.adult}</span>
+                <button
+                  className="option__btn"
+                  onClick={() => handleOption("adult", "i")}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div className="option__item">
+              <span className="option__text">Children</span>
+              <div className="option__counter">
+                <button
+                  disabled={options.children <= 0}
+                  className="option__btn"
+                  onClick={() => handleOption("children", "d")}
+                >
+                  -
+                </button>
+                <span className="option__number">{options.children}</span>
+                <button
+                  className="option__btn"
+                  onClick={() => handleOption("children", "i")}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div className="option__item">
+              <span className="option__text">Room</span>
+              <div className="option__counter">
+                <button
+                  disabled={options.room <= 1}
+                  className="option__btn"
+                  onClick={() => handleOption("room", "d")}
+                >
+                  -
+                </button>
+                <span className="option__number">{options.room}</span>
+                <button
+                  className="option__btn"
+                  onClick={() => handleOption("room", "i")}
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
-          <div className="option__item">
-            <span className="option__text">Children</span>
-            <div className="option__counter">
-              <button
-                className="option__btn"
-                onClick={() => handleOption("children", "d")}
-              >
-                -
-              </button>
-              <span className="option__number">{options.children}</span>
-              <button
-                className="option__btn"
-                onClick={() => handleOption("children", "i")}
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <div className="option__item">
-            <span className="option__text">Room</span>
-            <div className="option__counter">
-              <button
-                className="option__btn"
-                onClick={() => handleOption("room", "d")}
-              >
-                -
-              </button>
-              <span className="option__number">{options.room}</span>
-              <button
-                className="option__btn"
-                onClick={() => handleOption("room", "i")}
-              >
-                +
-              </button>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
       <div className="searchBox__item">
         <button className="searchBox__btn | u-bg-blue-200 u-text-white">

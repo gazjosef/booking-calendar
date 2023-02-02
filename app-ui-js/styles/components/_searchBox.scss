@@ -74,5 +74,9 @@
     width: 3rem;
 
     color: $clr-blue-200;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
 }

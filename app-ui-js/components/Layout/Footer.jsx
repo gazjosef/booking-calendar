@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer__lists">
+        {/* <div className="footer__lists">
           <ul className="footer__list">
             <li className="footer__list-item">Countries</li>
             <li className="footer__list-item">Countries</li>
@@ -10,8 +10,8 @@ function Footer() {
             <li className="footer__list-item">Countries</li>
             <li className="footer__list-item">Countries</li>
           </ul>
-        </div>
-        <div className="footer__copyright">Copyright &copy; 2023</div>
+        </div> */}
+        <div className="footer__copyright">Ant Software &copy; 2023</div>
       </div>
     </footer>
   );

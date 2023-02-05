@@ -6,16 +6,28 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  z-index: 1;
 
   &__item {
     border-radius: 1rem;
+    height: 25rem;
+    width: 100%;
     overflow: hidden;
+
     position: relative;
+
     color: $clr-white;
   }
 
   &__img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  &__titles {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
   }
 }

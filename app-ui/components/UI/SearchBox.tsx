@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { FaBed, FaCalendarAlt, FaUser } from "react-icons/fa";
-import { setConstantValue } from "typescript";
+// import { setConstantValue } from "typescript";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
+interface DateRangeSelection {
+  startDate: Date;
+  endDate: Date | null;
+  key: string;
+}
+
 export default function SearchBox() {
-  const [date, setDate] = useState([
+  const [date, setDate] = useState<DateRangeSelection[]>([
     {
       startDate: new Date(),
       endDate: null,
@@ -28,10 +34,10 @@ export default function SearchBox() {
         <FaCalendarAlt className="searchBox__icon" />
         <span className="searchBox__text">Date to Date</span>
         <DateRange
-        // editableDateInputs={true}
-        // onChange={item => setDate([item.selection])}
-        // moveRangeOnFirstSelection={false}
-        // ranges={date}
+          editableDateInputs={true}
+          onChange={(item) => setDate([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={date}
         />
       </div>
       <div className="searchBox__item">

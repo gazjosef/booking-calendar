@@ -8,7 +8,7 @@ export const Meta = ({ title, keywords, description }) => {
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
 
-      {/* Favicon: Coding Icon */}
+      {/* Favicon: Calendar Icon */}
       <link
         rel="apple-touch-icon"
         sizes="180x180"

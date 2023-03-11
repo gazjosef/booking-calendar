@@ -13,7 +13,6 @@ export const Meta = ({ title, keywords, description }) => {
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon_io/apple-touch-icon.png"
-        // href="../public/favicon_io/android-chrome-192x192.png"
       />
       <link
         rel="icon"
@@ -28,9 +27,7 @@ export const Meta = ({ title, keywords, description }) => {
         href="/favicon_io/favicon-16x16.png"
       />
       <link rel="manifest" href="/favicon_io/site.webmanifest" />
-
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-
       <link rel="preconnect" href="https://fonts.googleapis.com" />
 
       <title>{title}</title>
@@ -39,7 +36,7 @@ export const Meta = ({ title, keywords, description }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Gerringong',
+  title: 'Calendar',
   keywords: 'web design, web development',
   description: 'Portfolio Website',
 }

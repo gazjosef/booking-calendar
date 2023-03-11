@@ -13,6 +13,7 @@ export const Meta = ({ title, keywords, description }) => {
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon_io/apple-touch-icon.png"
+        // href="../public/favicon_io/android-chrome-192x192.png"
       />
       <link
         rel="icon"

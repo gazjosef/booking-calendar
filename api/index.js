@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 // ROUTES
 import authRoutes from "./routes/auth.js";
 import usersRoutes from "./routes/users.js";
-import tipsRoutes from "./routes/tips.js";
 import roomsRoutes from "./routes/rooms.js";
 
 const app = express();
@@ -30,7 +29,6 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
-app.use("/api/tips", tipsRoutes);
 app.use("/api/rooms", roomsRoutes);
 
 app.use((err, req, res, next) => {

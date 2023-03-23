@@ -6,17 +6,18 @@ import {
   getRoom,
   updateRoom,
 } from "../controllers/room.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
 // CREATE
-router.post("/", createRoom);
+router.post("/", verifyAdmin, createRoom);
 
 // UPDATE
-router.put("/:id", updateRoom);
+router.put("/:id", verifyAdmin, updateRoom);
 
 // DELETE
-router.delete("/:id", deleteRoom);
+router.delete("/:id", verifyAdmin, deleteRoom);
 
 // GET
 router.get("/:id", getRoom);

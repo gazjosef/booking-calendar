@@ -7,7 +7,7 @@ import {
   getProperty,
   getProperties,
   updateProperty,
-} from "../controllers/Property.js";
+} from "../controllers/property.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 

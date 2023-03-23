@@ -46,7 +46,7 @@ export const getProperty = async (req, res, next) => {
   }
 };
 
-export const getPropertys = async (req, res, next) => {
+export const getProperties = async (req, res, next) => {
   try {
     const properties = await Property.find(req.query).limit(req.query.limit);
     res.status(200).json(properties);

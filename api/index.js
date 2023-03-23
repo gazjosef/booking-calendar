@@ -2,9 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 // ROUTES
 import authRoutes from "./routes/auth.js";
 import usersRoutes from "./routes/users.js";
+import propertiesRoute from "./routes/properties.js";
 import roomsRoutes from "./routes/rooms.js";
 
 const app = express();
@@ -24,11 +26,13 @@ mongoose.connection.on("disconnected", () => {
 });
 
 // MIDDLEWARE
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
+app.use("/api/properties", propertiesRoute);
 app.use("/api/rooms", roomsRoutes);
 
 app.use((err, req, res, next) => {

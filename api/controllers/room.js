@@ -42,8 +42,16 @@ export const updateRoom = async (req, res, next) => {
 
 // DELETE ROOM
 export const deleteRoom = async (req, res, next) => {
+  const propertyId = req.params.propertyid;
   try {
     await Room.findByIdAndDelete(req.params.id);
+    try {
+      await Property.findByIdAndUpdate(propertyId, {
+        $pull: { rooms: req.params.id },
+      });
+    } catch (error) {
+      next(error);
+    }
     res.status(200).json("Room has been deleted");
   } catch (error) {
     res.status(500).json(error);

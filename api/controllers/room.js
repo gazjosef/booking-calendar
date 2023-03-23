@@ -1,14 +1,24 @@
 import Room from "../models/Room.js";
+import Property from "../models/Property.js";
 
 // CREATE ROOM
 export const createRoom = async (req, res, next) => {
+  const propertyId = req.params.propertyid;
   const newRoom = new Room(req.body);
 
   try {
     const savedRoom = await newRoom.save();
+
+    try {
+      await Property.findByIdAndUpdate(propertyId, {
+        $push: { rooms: savedRoom._id },
+      });
+    } catch (error) {
+      next(error);
+    }
     res.status(200).json(savedRoom);
   } catch (error) {
-    res.status(500).json(error);
+    next(error);
   }
 };
 

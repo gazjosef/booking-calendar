@@ -16,6 +16,7 @@ import {
   startOfToday,
 } from 'date-fns'
 import { Fragment, useState } from 'react'
+import useFetch from '../hooks/useFetch.js'
 
 const meetings = [
   {
@@ -65,6 +66,10 @@ function classNames(...classes) {
 }
 
 export default function Calendar() {
+  // GET PROPERTIES
+  const { data, loading, error, refetch } = useFetch('/properties')
+  console.log('data', data)
+
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)
   let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))

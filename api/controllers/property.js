@@ -1,4 +1,5 @@
 import Property from "../models/Property.js";
+import Room from "../models/Room.js";
 
 export const createProperty = async (req, res, next) => {
   const newProperty = new Property(req.body);
@@ -86,5 +87,20 @@ export const countByType = async (req, res, next) => {
     ]);
   } catch (err) {
     next(err);
+  }
+};
+
+export const getPropertyRooms = async (req, res, next) => {
+  try {
+    const property = await Property.findById(req.params.id);
+    const list = await Promise.all(
+      property.rooms.map((room) => {
+        return Room.findById(room);
+      })
+    );
+
+    res.status(200).json(list);
+  } catch (error) {
+    next(error);
   }
 };

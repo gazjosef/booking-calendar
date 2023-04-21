@@ -5,6 +5,7 @@ import {
   createProperty,
   deleteProperty,
   getProperty,
+  getPropertyRooms,
   getProperties,
   updateProperty,
 } from "../controllers/property.js";
@@ -27,5 +28,6 @@ router.get("/find/:id", getProperty);
 router.get("/", getProperties);
 router.get("/countByCity", countByCity);
 router.get("/countByType", countByType);
+router.get("/room/:id", getPropertyRooms);
 
 export default router;

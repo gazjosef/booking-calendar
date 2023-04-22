@@ -8,7 +8,7 @@ export const Reserve = ({ setOpen }) => {
   const { data, loading, error } = useFetch(`hotels/room/${hotelId}`)
 
   const handleSelect = (e) => {
-    e.preventDefault()
+    const selectedRoom
   }
 
   return (

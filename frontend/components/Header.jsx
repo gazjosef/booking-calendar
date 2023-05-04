@@ -1,6 +1,8 @@
-import React from 'react'
+import { useState } from 'react'
 
 const Header = () => {
+  const [user, setUser] = useState(false)
+
   return (
     <header className="p-6 shadow-[0_0_5px_0_rgba(0,0,0,0.5)]">
       <div className="container mx-auto flex items-center justify-between font-semibold tracking-wide">
@@ -12,7 +14,7 @@ const Header = () => {
           />
           <h2 className="ml-2">Booking Calendar</h2>
         </div>
-        <div className=" flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <p>Welcome back, Leslie</p>
           <img
             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"

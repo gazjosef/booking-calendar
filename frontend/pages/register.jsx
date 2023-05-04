@@ -77,7 +77,7 @@ const register = () => {
                   Already have an account?{' '}
                   <Link
                     href="/"
-                    className="text-danger hover:text-danger-600 focus:text-danger-600 active:text-danger-700 font-bold text-blue-800 transition duration-150 ease-in-out"
+                    className="text-danger hover:text-danger-600 focus:text-danger-600 active:text-danger-700 font-extrabold text-blue-800 transition duration-150 ease-in-out"
                   >
                     Login here.
                   </Link>

@@ -45,7 +45,7 @@ export default function Example() {
                   Don't have an account?{' '}
                   <Link
                     href="/register"
-                    className="text-danger hover:text-danger-600 focus:text-danger-600 active:text-danger-700 font-bold text-blue-800 transition duration-150 ease-in-out"
+                    className="text-danger hover:text-danger-600 focus:text-danger-600 active:text-danger-700 font-extrabold text-blue-800 transition duration-150 ease-in-out"
                   >
                     Register here.
                   </Link>

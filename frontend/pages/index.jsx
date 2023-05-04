@@ -42,13 +42,11 @@ export default function Example() {
 
               <div className="text-center lg:text-left">
                 <p className="my-2 pt-1 text-sm font-semibold">
-                  Don't have an account?{' '}
+                  Don't have an account? <Link href="/register">Register</Link>
                   <a
                     href="#!"
                     className="text-danger hover:text-danger-600 focus:text-danger-600 active:text-danger-700 transition duration-150 ease-in-out"
-                  >
-                    Register
-                  </a>
+                  ></a>
                 </p>
                 <button
                   type="button"

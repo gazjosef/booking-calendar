@@ -25,7 +25,6 @@ const getAllRooms = asyncHandler(async (req, res) => {
 const setRoom = asyncHandler(async (req, res) => {
   if (!req.body.text) {
     res.status(400);
-
     throw new Error("Please add a text field");
   }
 

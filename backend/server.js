@@ -1,15 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
-// const { errorHandler } = require("./middleware/errorMiddleware");
+const { errorHandler } = require("./middleware/errorMiddleware");
 const port = process.env.PORT || 5050;
 
 const app = express();
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/rooms", require("./routes/roomRoutes"));
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

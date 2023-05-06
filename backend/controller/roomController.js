@@ -22,6 +22,12 @@ const getAllRooms = asyncHandler(async (req, res) => {
 // @route   POST /api/rooms
 // @access  Private
 const setRoom = asyncHandler(async (req, res) => {
+  if (!req.body.text) {
+    res.status(400);
+
+    throw new Error("Please add a text field");
+  }
+
   res.status(200).json({
     message: "Set Room",
   });

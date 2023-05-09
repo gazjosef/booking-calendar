@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Room = require("../models/roomModel");
+const User = require("../models/userModel");
 
 // *** GET ROOM
 // @route   GET /api/rooms
@@ -14,7 +15,7 @@ const getRoom = asyncHandler(async (req, res) => {
 // @route   GET /api/rooms
 // @access  Private
 const getAllRooms = asyncHandler(async (req, res) => {
-  const rooms = await Room.find();
+  const rooms = await Room.find({ user: req.user.id });
 
   res.status(200).json(rooms);
 });
@@ -30,6 +31,7 @@ const setRoom = asyncHandler(async (req, res) => {
 
   const room = await Room.create({
     text: req.body.text,
+    user: req.user.id,
   });
 
   res.status(200).json(room);
@@ -44,6 +46,20 @@ const updateRoom = asyncHandler(async (req, res) => {
   if (!room) {
     res.status(400);
     throw new Error("Room not found");
+  }
+
+  const user = await User.findById(req.user.id);
+
+  // CHECK FOR USER
+  if (!user) {
+    res.status(401);
+    throw new Error("User not found");
+  }
+
+  // MAKE SURE THE LOGGED USER MATCHES THE TIP USER
+  if (room.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("User not authorized");
   }
 
   const updatedRoom = await Room.findByIdAndUpdate(req.params.id, req.body, {
@@ -62,6 +78,20 @@ const deleteRoom = asyncHandler(async (req, res) => {
   if (!room) {
     res.status(400);
     throw new Error("Room not found");
+  }
+
+  const user = await User.findById(req.user.id);
+
+  // CHECK FOR USER
+  if (!user) {
+    res.status(401);
+    throw new Error("User not found");
+  }
+
+  // MAKE SURE THE LOGGED USER MATCHES THE TIP USER
+  if (room.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("User not authorized");
   }
 
   await room.deleteOne();

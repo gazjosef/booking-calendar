@@ -1,7 +1,7 @@
 {
   "name": "booking-calendar",
   "version": "1.0.0",
-  "description": "",
+  "description": "An interactive calendar to book accommodation.",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",

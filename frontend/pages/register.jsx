@@ -1,6 +1,14 @@
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
-const register = () => {
+const Register = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    password2: '',
+  })
+
   return (
     <div className="pt-16">
       <div className="mx-auto max-w-md px-4 sm:px-7 md:max-w-4xl md:px-6">
@@ -118,4 +126,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register

@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import { useState } from 'react'
+import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 
 const Header = () => {
   const [user, setUser] = useState(false)
@@ -18,14 +20,31 @@ const Header = () => {
           {user ? (
             <div>
               <p>Welcome back, Leslie</p>
-              <img
+              {/* <img
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt=""
                 className="h-10 w-10 flex-none rounded-full"
-              />
+              /> */}
             </div>
           ) : (
-            <div></div>
+            <ul className="flex items-center justify-between">
+              <li>
+                <Link
+                  href="/"
+                  className="m-1 flex items-center justify-between"
+                >
+                  <FaSignInAlt className="mr-1" /> Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/register"
+                  className="m-1 flex items-center justify-between"
+                >
+                  <FaUser className="mr-1" /> Register
+                </Link>
+              </li>
+            </ul>
           )}
         </div>
       </div>

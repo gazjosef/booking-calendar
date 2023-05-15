@@ -1,39 +1,64 @@
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function Example() {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  })
+
+  const { email, password } = formData
+
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }))
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
-    <div className="pt-16">
+    <section className="pt-16">
       <div className="mx-auto max-w-md px-4 sm:px-7 md:max-w-4xl md:px-6">
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           {/* LOGIN */}
-          <div className="md:pr-14">
-            <form action="">
-              {/* <!-- Email input --> */}
+          <section className="md:pr-14">
+            <form onSubmit={onSubmit}>
+              {/* <!-- EMAIL INPUT --> */}
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <input
-                  type="text"
+                  type="email"
                   className="peer block min-h-[auto] w-full rounded border-0 bg-gray-300 py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleFormControlInput2"
-                  placeholder="Email address"
+                  id="email"
+                  name="email"
+                  value={email}
+                  placeholder="Enter your email address"
+                  onChange={onChange}
                 />
                 <label
-                  htmlFor="exampleFormControlInput2"
+                  htmlFor="email"
                   className="peer-focus:text-primary pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
                 >
                   Email address
                 </label>
               </div>
 
-              {/* <!-- Password input --> */}
+              {/* <!-- PASSWORD INPUT --> */}
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <input
                   type="password"
                   className="peer block min-h-[auto] w-full rounded border-0 bg-gray-300 py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleFormControlInput22"
-                  placeholder="Password"
+                  id="password"
+                  name="password"
+                  value={password}
+                  placeholder="Enter your password"
+                  onChange={onChange}
                 />
                 <label
-                  htmlFor="exampleFormControlInput22"
+                  htmlFor="password"
                   className="peer-focus:text-primary pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
                 >
                   Password
@@ -60,7 +85,7 @@ export default function Example() {
                 </button>
               </div>
             </form>
-          </div>
+          </section>
 
           {/* GUEST */}
           <section className="mt-12 md:mt-0 md:pl-14">
@@ -82,6 +107,6 @@ export default function Example() {
           </section>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

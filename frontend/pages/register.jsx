@@ -11,15 +11,24 @@ const Register = () => {
 
   const { name, email, password, password2 } = formData
 
-  const onChange = () => {}
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }))
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+  }
 
   return (
-    <article className="pt-16">
+    <section className="pt-16">
       <div className="mx-auto max-w-md px-4 sm:px-7 md:max-w-4xl md:px-6">
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           {/* LOGIN */}
           <section className="md:pr-14">
-            <form action="">
+            <form onSubmit={onSubmit}>
               {/* <!-- NAME INPUT --> */}
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <input
@@ -118,11 +127,10 @@ const Register = () => {
             </form>
           </section>
 
-          {/* GUEST */}
           <section className="mt-12 md:mt-0 md:pl-14"> </section>
         </div>
       </div>
-    </article>
+    </section>
   )
 }
 

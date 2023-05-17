@@ -100,8 +100,10 @@ function classNames(...classes) {
 
 export default function Calendar() {
   // GET PROPERTIES
-  const { data, loading, error, refetch } = useFetch('/properties')
-  console.log('data', data)
+  const { data, loading, error, refetch } = useFetch('/rooms')
+  console.log('Rooms: data', data)
+  console.log('Rooms: loading', loading)
+  console.log('Rooms: error', error)
 
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)

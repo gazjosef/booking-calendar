@@ -15,7 +15,8 @@ const getRoom = asyncHandler(async (req, res) => {
 // @route   GET /api/rooms
 // @access  Private
 const getAllRooms = asyncHandler(async (req, res) => {
-  const rooms = await Room.find({ user: req.user.id });
+  // const rooms = await Room.find({ user: req.user.id });
+  const rooms = await Room.find();
 
   res.status(200).json(rooms);
 });

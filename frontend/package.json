@@ -15,7 +15,8 @@
     "next": "latest",
     "npm": "^9.6.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.6",
@@ -29,5 +30,5 @@
     "tailwindcss": "^3.0.7",
     "typescript": "^5.0.2"
   },
-  "proxy": "http://localhost:8822/api"
+  "proxy": "http://localhost:5050/api"
 }

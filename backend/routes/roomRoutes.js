@@ -9,7 +9,7 @@ const {
 } = require("../controller/roomController");
 const { protect } = require("../middleware/authMiddleware");
 
-router.route("/").get(protect, getAllRooms).post(protect, setRoom);
+router.route("/").get(getAllRooms).post(protect, setRoom);
 
 router
   .route("/:id")

@@ -6,7 +6,7 @@ const Header = () => {
   const [user, setUser] = useState(false)
 
   return (
-    <header className="p-6 shadow-[0_0_5px_0_rgba(0,0,0,0.5)]">
+    <header className="p-6 text-slate-700 shadow-[0_0_5px_0_rgba(0,0,0,0.5)]	">
       <div className="container mx-auto flex items-center justify-between font-semibold tracking-wide">
         <div className="head__logo | flex items-center gap-2">
           <img

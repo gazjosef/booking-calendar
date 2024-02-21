@@ -89,7 +89,7 @@ export default function Example() {
 
           {/* GUEST */}
           <section className="mt-12 md:mt-0 md:pl-14">
-            <div className="mt-auto">
+            {/* <div className="mt-auto">
               <p className="my-2 pt-1 text-sm font-semibold">
                 Sign-in with guest account.
               </p>
@@ -103,7 +103,7 @@ export default function Example() {
                   Guest
                 </button>
               </Link>
-            </div>
+            </div> */}
           </section>
         </div>
       </div>

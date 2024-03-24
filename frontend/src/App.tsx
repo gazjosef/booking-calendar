@@ -1,17 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 // ** Import Shared Components
-import Layout from "../components/Layout/Layout.tsx";
-import Login from "../components/Sections/Login.tsx";
-import Register from "../components/Sections/Register.tsx";
-import Calendar from "../components/Snippets/Calendar";
+// import Layout from "../components/Layout/Layout.tsx";
+// import Login from "../components/Sections/Login.tsx";
+// import Register from "../components/Sections/Register.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
+import Login from "./pages/Login.tsx";
+import Register from "./pages/Register.tsx";
+
 import "./App.css";
 
 function App() {
   return (
-    <Layout>
-      {/* <Calendar /> */}
-      <Login />
-      <Register />
-    </Layout>
+    <>
+      <Router>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 

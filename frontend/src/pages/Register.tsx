@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 
 const Register: React.FC = () => {
@@ -25,10 +25,12 @@ const Register: React.FC = () => {
     <>
       <section className="heading">
         <div className="container">
-          <h1>
-            <FaUser />
-            Register
-          </h1>
+          <div className="flex item-center justify-center gap-1">
+            <span className="grid place-items-center">
+              <FaUser />
+            </span>
+            <h1>Register</h1>
+          </div>
           <p>Please create an account</p>
         </div>
       </section>

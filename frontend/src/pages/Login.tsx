@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 
 const Login: React.FC = () => {
@@ -22,13 +22,13 @@ const Login: React.FC = () => {
   return (
     <>
       <section className="heading">
-        <div className="container">
-          <h1>
+        <div className="flex item-center justify-center gap-1">
+          <span className="grid place-items-center">
             <FaSignInAlt />
-            Login
-          </h1>
-          <p>Please create an account</p>
+          </span>
+          <h1>Login</h1>
         </div>
+        <p>Login and start setting goals</p>
       </section>
 
       <section className="form">

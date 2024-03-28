@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/booking-calendar">
-    <img src="favicon_io/favicon-32x32.png" alt="Logo" width="80" height="80">
+    <img src="frontend/public/favicon_io/favicon-32x32.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Booking Calendar</h3>

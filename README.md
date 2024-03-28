@@ -30,11 +30,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/gazjosef/booking-calendar">
+    
+    <img src="https://github.com/gazjosef/portfolio-nextjs/blob/main/public/images/favicon_io/favicon-32x32.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Booking Calendar</h3>
 
   <p align="center">
     project_description
@@ -85,7 +86,9 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+[![Product Name Screen Shot][product-screenshot]]([https://example.com](https://github.com/gazjosef/portfolio-nextjs/blob/main/public/images/posts/booking-calendar3.png))
+
+Welcome to the Booking App README. This application is designed to simplify the booking process for various properties. Leveraging modern technologies such as RESTful API for authentication, Redux for state management, MongoDB for robust database storage, and SASS for sleek styling, this app ensures a user-friendly and efficient booking experience. Refer to this README for installation instructions, usage guidelines, and customisation details. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

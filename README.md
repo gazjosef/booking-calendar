@@ -31,8 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/booking-calendar">
-    
-    <img src="https://github.com/gazjosef/booking-calendar/blob/main/public/images/favicon_io/favicon-32x32.png" alt="Logo" width="80" height="80">
+    <img src="/images/favicon_io/favicon-32x32.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Booking Calendar</h3>
@@ -85,6 +84,7 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/gazjosef/portfolio-nextjs/blob/main/public/images/posts/booking-calendar3.png)
 
 Welcome to the Booking App README. This application is designed to simplify the booking process for various properties. Leveraging modern technologies such as RESTful API for authentication, Redux for state management, MongoDB for robust database storage, and SASS for sleek styling, this app ensures a user-friendly and efficient booking experience. Refer to this README for installation instructions, usage guidelines, and customisation details. 
 

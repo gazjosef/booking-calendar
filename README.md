@@ -94,6 +94,7 @@ Welcome to the Booking App README. This application is designed to simplify the 
 
 ### Built With
 
+* ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]

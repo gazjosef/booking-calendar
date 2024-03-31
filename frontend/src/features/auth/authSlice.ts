@@ -24,14 +24,12 @@ interface AuthState {
 }
 
 const initialState: AuthState = {
-  user: null, // Initialize user as null initially
+  user: null,
   isError: false,
   isSuccess: false,
   isLoading: false,
   message: "",
 };
-
-console.log("initialState", initialState);
 
 export const authSlice = createSlice({
   name: "auth",
@@ -44,12 +42,7 @@ export const authSlice = createSlice({
       state.message = "";
     },
   },
-  extraReducers: (builder) => {
-    // Handle the pending and fulfilled actions of the fetchUserFromLocalStorage thunk
-    builder.addCase(fetchUserFromLocalStorage.fulfilled, (state, action) => {
-      state.user = action.payload; // Update the user state with fetched user data
-    });
-  },
+  extraReducers: () => {},
 });
 
 export const { reset } = authSlice.actions;

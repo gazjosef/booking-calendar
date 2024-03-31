@@ -25,11 +25,12 @@ const initialState: AuthState = {
   message: "",
 };
 // Register user
-export const register = createAsyncThunk(
+export const register = createAsyncThunk<User, UserData>(
   "auth/register",
-  async (user: UserData, thunkAPI) => {
+  async (userData, thunkAPI) => {
     try {
-      return await authService.register(user);
+      const response = await authService.register(userData);
+      return response.data;
     } catch (error) {
       if (isAxiosError(error)) {
         const message =
@@ -58,7 +59,23 @@ export const authSlice = createSlice({
       state.message = "";
     },
   },
-  extraReducers: () => {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(register.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(register.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(register.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload as string;
+        state.user = null;
+      });
+  },
 });
 
 export const { reset } = authSlice.actions;

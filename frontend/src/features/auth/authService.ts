@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export interface UserData {
-  // ! Check the structure of user data
-  username: string;
+  name: string;
   email: string;
   password: string;
+  password2: string;
 }
 
 const API_URL = "/api/users/";

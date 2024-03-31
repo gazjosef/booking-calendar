@@ -3,8 +3,8 @@ import authService, { UserData } from "./authService";
 import { isAxiosError } from "axios";
 
 interface User {
-  id: string;
-  username: string;
+  email: string;
+  password: string;
 }
 
 const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -25,7 +25,7 @@ const initialState: AuthState = {
   message: "",
 };
 // Register user
-export const register = createAsyncThunk<User, UserData>(
+export const register = createAsyncThunk<UserData, UserData>(
   "auth/register",
   async (userData, thunkAPI) => {
     try {

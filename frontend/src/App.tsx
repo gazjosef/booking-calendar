@@ -8,7 +8,6 @@ import Dashboard from "./pages/Dashboard.tsx";
 import Login from "./pages/Login.tsx";
 import Register from "./pages/Register.tsx";
 import Header from "../components/Layout/Header.tsx";
-
 import "./App.css";
 
 function App() {

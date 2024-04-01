@@ -2,10 +2,14 @@ import axios from "axios";
 
 const API_URL = "/api/users/";
 
-type TODO = any;
+export interface UserData {
+  name: string;
+  email: string;
+  password: string;
+}
 
 // Register user
-const register = async (userData: TODO) => {
+const register = async (userData: UserData) => {
   const response = await axios.post(API_URL, userData);
 
   if (response.data) {

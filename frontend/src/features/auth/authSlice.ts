@@ -1,52 +1,19 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import authService, { UserData } from "./authService";
-import { isAxiosError } from "axios";
+import {
+  createSlice,
+  // createAsyncThunk
+} from "@reduxjs/toolkit";
 
-interface User {
-  email: string;
-  password: string;
-}
+// GEt user from local storage
+const userString = localStorage.getItem("user");
+const user = userString ? JSON.parse(userString) : null;
 
-const user = JSON.parse(localStorage.getItem("user") || "null");
-
-interface AuthState {
-  user: User | null;
-  isError: boolean;
-  isSuccess: boolean;
-  isLoading: boolean;
-  message: string;
-}
-
-const initialState: AuthState = {
+const initialState = {
   user: user ? user : null,
   isError: false,
   isSuccess: false,
   isLoading: false,
   message: "",
 };
-// Register user
-export const register = createAsyncThunk<UserData, UserData>(
-  "auth/register",
-  async (userData, thunkAPI) => {
-    try {
-      const response = await authService.register(userData);
-      return response.data;
-    } catch (error) {
-      if (isAxiosError(error)) {
-        const message =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
-        return thunkAPI.rejectWithValue(message);
-      } else {
-        const err = error as Error;
-        return thunkAPI.rejectWithValue(err.message || err.toString());
-      }
-    }
-  }
-);
 
 export const authSlice = createSlice({
   name: "auth",
@@ -59,23 +26,7 @@ export const authSlice = createSlice({
       state.message = "";
     },
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(register.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(register.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.user = action.payload;
-      })
-      .addCase(register.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isError = true;
-        state.message = action.payload as string;
-        state.user = null;
-      });
-  },
+  extraReducers: () => {},
 });
 
 export const { reset } = authSlice.actions;

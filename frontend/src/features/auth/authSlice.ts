@@ -1,7 +1,6 @@
-import {
-  createSlice,
-  // createAsyncThunk
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import authService from "./authService";
+import { isAxiosError } from "axios";
 
 // GEt user from local storage
 const userString = localStorage.getItem("user");
@@ -14,6 +13,29 @@ const initialState = {
   isLoading: false,
   message: "",
 };
+
+// Register User
+export const register = createAsyncThunk(
+  "auth/register",
+  async (user, thunkAPI) => {
+    try {
+      return await authService.register(user);
+    } catch (error) {
+      if (isAxiosError(error)) {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        return thunkAPI.rejectWithValue(message);
+      } else {
+        const err = error as Error;
+        return thunkAPI.rejectWithValue(err.message || err.toString());
+      }
+    }
+  }
+);
 
 export const authSlice = createSlice({
   name: "auth",

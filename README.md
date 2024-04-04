@@ -18,9 +18,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url] -->
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
@@ -30,15 +30,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/booking-calendar">
-    <img src="frontend/public/favicon_io/favicon-32x32.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Booking Calendar</h3>
 
   <p align="center">
-    An interactive calendar to book accommodation.
-    <br />
-    <a href="https://github.com/gazjosef/booking-calendar"><strong>Explore the docs »</strong></a>
+    Optimize your booking process with ease using our user-friendly calendar app, tailored for efficient management.
     <br />
     <br />
     <a href="https://github.com/gazjosef/booking-calendar">View Demo</a>
@@ -80,20 +78,19 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-[![Product Name Screen Shot][product-screenshot]](https://github.com/gazjosef/portfolio-nextjs/blob/main/public/images/posts/booking-calendar3.png)
 
-Welcome to the Booking App README. This application is designed to simplify the booking process for various properties. Leveraging modern technologies such as RESTful API for authentication, Redux for state management, MongoDB for robust database storage, and SASS for sleek styling, this app ensures a user-friendly and efficient booking experience. Refer to this README for installation instructions, usage guidelines, and customisation details.
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `gazjosef`, `booking-calendar`, `twitter_handle`, `gareth-h-a32448191`, `gmail`, `email`, `Weather App`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+- [![Vite][Vite.com]][Vite-url]
+- [![TypeScript][TypeScript.com]][TypeScript-url]
 - [![React][React.js]][React-url]
-- ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-- ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+- [![SASS][SASS.com]][SASS-url]
+- [![MongoDB][MongoDB.com]][MongoDB-url]
+- [![Redux][Redux.com]][Redux-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,20 +112,18 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free URI Key at [https://www.mongodb.com/](https://www.mongodb.com/)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/gazjosef/booking-calendar.git
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+4. Enter your URI Key and server number in `.env`
    ```js
-   const MONGO_URI = "ENTER YOUR MONGO URI";
-   ```
-   ```js
+   const URI_KEY = "ENTER YOUR URI KEY";
    const SERVER = "ENTER YOUR SERVER NUMBER";
    ```
 
@@ -153,25 +148,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
   - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/gazjosef/booking-calendar/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-<!-- ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LICENSE -->
 
@@ -185,36 +164,27 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Gareth Hind - gareth@gmail.com
 
-Project Link: [https://github.com/gazjosef/booking-calendar](https://github.com/gazjosef/booking-calendar)
+Project Link: [https://github.com/gazjosef](https://github.com/gazjosef)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-<!-- ## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/gazjosef/booking-calendar.svg?style=for-the-badge
+[contributors-url]: https://github.com/gazjosef/booking-calendar/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/gazjosef/booking-calendar.svg?style=for-the-badge
+[forks-url]: https://github.com/gazjosef/booking-calendar/network/members
+[stars-shield]: https://img.shields.io/github/stars/gazjosef/booking-calendar.svg?style=for-the-badge
 [stars-url]: https://github.com/gazjosef/booking-calendar/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/gazjosef/booking-calendar.svg?style=for-the-badge
 [issues-url]: https://github.com/gazjosef/booking-calendar/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/gazjosef/booking-calendar.svg?style=for-the-badge
 [license-url]: https://github.com/gazjosef/booking-calendar/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/gareth-h-a32448191/
+[linkedin-url]: https://linkedin.com/in/gareth-h-a32448191
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -222,13 +192,25 @@ Project Link: [https://github.com/gazjosef/booking-calendar](https://github.com/
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+[TailwindCSS.com]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[TailwindCSS-url]: https://tailwindcss.com/
+[Cypress.com]: https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e
+[Cypress-url]: https://www.cypress.io/
+[Jest.com]: https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white
+[Jest-url]: https://jestjs.io/
+[TypeScript.com]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
+[JavaScript.com]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Vite.com]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[MongoDB.com]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[Redux.com]: https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
+[Redux-url]: https://redux.js.org/
+[Sass.com]: https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
+[Sass-url]: https://sass-lang.com/

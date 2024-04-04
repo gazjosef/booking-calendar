@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import authService, { UserData } from "./authService";
 import { isAxiosError } from "axios";
 
-// GEt user from local storage
+// Get user from local storage
 const userString = localStorage.getItem("user");
 const user = userString ? JSON.parse(userString) : null;
 
@@ -48,7 +48,23 @@ export const authSlice = createSlice({
       state.message = "";
     },
   },
-  extraReducers: () => {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(register.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(register.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(register.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload as string;
+        state.user = null;
+      });
+  },
 });
 
 export const { reset } = authSlice.actions;

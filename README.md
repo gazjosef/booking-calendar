@@ -33,10 +33,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Weather App</h3>
+<h3 align="center">Booking Calendar</h3>
 
   <p align="center">
-    Stay ahead of the forecast with real-time weather updates and personalized alerts on our intuitive weather app.
+    Optimize your booking process with ease using our user-friendly calendar app, tailored for efficient management.
     <br />
     <br />
     <a href="https://github.com/gazjosef/booking-calendar">View Demo</a>
@@ -88,8 +88,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 - [![Vite][Vite.com]][Vite-url]
 - [![TypeScript][TypeScript.com]][TypeScript-url]
 - [![React][React.js]][React-url]
-- [![TailwindCSS][TailwindCSS.com]][TailwindCSS-url]
-- [![Cypress][Cypress.com]][Cypress-url]
+- [![SASS][SASS.com]][SASS-url]
+- [![MongoDB][MongoDB.com]][MongoDB-url]
+- [![Redux][Redux.com]][Redux-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

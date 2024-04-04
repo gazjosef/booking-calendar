@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/booking-calendar">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="frontend/public/docs/calendar.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Booking Calendar</h3>

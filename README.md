@@ -112,7 +112,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://openweathermap.org/](https://openweathermap.org/)
+1. Get a free URI Key at [https://www.mongodb.com/](https://www.mongodb.com/)
 2. Clone the repo
    ```sh
    git clone https://github.com/gazjosef/booking-calendar.git
@@ -121,9 +121,10 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-4. Enter your API in `.env`
+4. Enter your URI Key and server number in `.env`
    ```js
-   const API_KEY = "ENTER YOUR API";
+   const URI_KEY = "ENTER YOUR URI KEY";
+   const SERVER = "ENTER YOUR SERVER NUMBER";
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

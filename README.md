@@ -77,7 +77,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/gazjosef/booking-calendar/frontend/public/docs/booking-calendar.png)
+[![Product Name Screen Shot][product-screenshot]]
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `gazjosef`, `booking-calendar`, `twitter_handle`, `gareth-h-a32448191`, `gmail`, `email`, `Weather App`, `project_description`
 

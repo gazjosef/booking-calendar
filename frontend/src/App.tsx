@@ -10,7 +10,6 @@ import Login from "./pages/Login.tsx";
 import Register from "./pages/Register.tsx";
 import Header from "../components/Layout/Header.tsx";
 
-import CalendarApp from "../components/Snippets/CalendarApp.tsx";
 import "./App.css";
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
         </div>
       </Router>
       <ToastContainer />
-      <CalendarApp />
     </>
   );
 }

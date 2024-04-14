@@ -36,7 +36,7 @@
 <h3 align="center">Booking Calendar</h3>
 
   <p align="center">
-    Optimize your booking process with ease using our user-friendly calendar app, tailored for efficient management.
+    Optimise your booking process with ease using our user-friendly calendar app, tailored for efficient management.
     <br />
     <br />
     <a href="https://github.com/gazjosef/booking-calendar">View Demo</a>

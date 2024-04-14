@@ -11,7 +11,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center gap-2">
             <img
               className="max-h-10"
-              src="/logo/calendar.png"
+              src="/favicon_io/android-chrome-512x512.png"
               alt="Calendar Logo"
             />
             <h2 className="ml-2">Booking Calendar</h2>

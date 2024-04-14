@@ -1,4 +1,4 @@
-import Calendar from "../../components/Snippets/Calendar";
+import Calendar from "../../components/Snippets/CalendarApp";
 
 const calendar: React.FC = () => {
   return (

@@ -10,11 +10,16 @@ const CalendarApp: React.FC = () => {
   const [value, onChange] = useState<Value>(new Date());
 
   return (
-    <div>
-      <Calendar
-        onChange={onChange as CalendarProps["onChange"]}
-        value={value as CalendarProps["value"]}
-      />
+    <div className="container mx-auto">
+      <div className="grid grid-cols-2">
+        <Calendar
+          onChange={onChange as CalendarProps["onChange"]}
+          value={value as CalendarProps["value"]}
+        />
+        <div>
+          <h1>Booking Info</h1>
+        </div>
+      </div>
     </div>
   );
 };

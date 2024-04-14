@@ -137,6 +137,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 - [x] Authentication
+- [x] Refactor To TypeScript
 - [ ] Migrate From Heroku
 - [ ] Redux
   - [ ] Booking

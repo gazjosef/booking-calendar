@@ -36,7 +36,7 @@
 <h3 align="center">Booking Calendar</h3>
 
   <p align="center">
-    Optimise your booking process with ease using our user-friendly calendar app, tailored for efficient management.
+    Optimise your booking process with ease using this user-friendly calendar app, tailored for efficient management.
     <br />
     <br />
     <a href="https://github.com/gazjosef/booking-calendar">View Demo</a>
@@ -136,10 +136,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [x] Authentication
+- [x] Refactor To TypeScript
+- [ ] Migrate From Heroku
+- [ ] Redux
+  - [ ] Booking
 
 See the [open issues](https://github.com/gazjosef/booking-calendar/issues) for a full list of proposed features (and known issues).
 

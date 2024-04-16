@@ -11,14 +11,17 @@ const CalendarApp: React.FC = () => {
 
   return (
     <div className="container | min-h-screen mx-auto">
-      <div className="py-16 grid grid-cols-2">
+      <div className="py-16 grid grid-cols-2 gap-16">
         <Calendar
           onChange={onChange as CalendarProps["onChange"]}
           value={value as CalendarProps["value"]}
-          className="min-w-full p-4 border border-solid border-opacity-20 border-black"
+          className="min-w-full border-none"
         />
         <div>
-          <h1>Booking Info</h1>
+          <h1 className="text-left">Schedule for [Calendar Date]</h1>
+          <h1 className="text-left | text-gray-500 font-light">
+            No bookings for today
+          </h1>
         </div>
       </div>
     </div>

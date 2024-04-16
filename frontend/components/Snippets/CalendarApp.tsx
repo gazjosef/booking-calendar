@@ -10,11 +10,12 @@ const CalendarApp: React.FC = () => {
   const [value, onChange] = useState<Value>(new Date());
 
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-2">
+    <div className="container | min-h-screen mx-auto">
+      <div className="py-16 grid grid-cols-2">
         <Calendar
           onChange={onChange as CalendarProps["onChange"]}
           value={value as CalendarProps["value"]}
+          className="min-w-full p-4 border border-solid border-opacity-20 border-black"
         />
         <div>
           <h1>Booking Info</h1>

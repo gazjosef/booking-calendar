@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="container">
+        <div className="container | min-h-max">
           <Header />
           <Routes>
             <Route path="/" element={<Dashboard />} />

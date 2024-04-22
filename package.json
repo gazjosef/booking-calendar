@@ -4,7 +4,8 @@
   "description": "A booking calendar for holiday properties.",
   "main": "server.ts",
   "scripts": {
-    "start": "node backend/server.ts",
+    "start": "npm run build && node dist/backend/server.js",
+    "build": "tsc",
     "server": "nodemon backend/server.ts",
     "client": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""

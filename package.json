@@ -1,7 +1,7 @@
 {
   "name": "booking-calendar",
   "version": "1.0.0",
-  "description": "A booking calendar for holiday properties.",
+  "description": "Optimise your booking process with ease using this user-friendly calendar app, tailored for efficient management.",
   "main": "server.ts",
   "scripts": {
     "start": "node backend/server.ts",

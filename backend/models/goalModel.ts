@@ -1,6 +1,5 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, Model, model } from "mongoose";
 import Document from "mongoose";
-import { Model } from "mongoose";
 
 // Define the interface for the document (instance of the model)
 export interface IGoal extends Document {

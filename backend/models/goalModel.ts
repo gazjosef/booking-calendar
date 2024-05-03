@@ -28,4 +28,4 @@ const goalSchema: Schema<IGoal> = new mongoose.Schema(
 );
 
 // Define the model
-export const Goal: Model<IGoal> = mongoose.model<IGoal>("Goal", goalSchema);
+export const Goal = model<IGoal>("Goal", goalSchema);

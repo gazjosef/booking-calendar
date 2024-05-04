@@ -1,5 +1,5 @@
 import colors from "colors";
-import mongoose from "mongoose";
+import { connect } from "mongoose";
 
 export const connectDB = async () => {
   try {
@@ -8,7 +8,7 @@ export const connectDB = async () => {
       throw new Error("MONGO_URI environment variable is not defined");
     }
 
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+    const conn = await connect(process.env.MONGO_URI);
     console.log(
       "MongoDB Connected: " + colors.cyan(conn.connection.host).underline
     );

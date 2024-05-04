@@ -13,7 +13,7 @@ export interface IGoal extends Document {
 const goalSchema: Schema<IGoal> = new mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      user: mongoose.Types.ObjectId,
       required: true,
       ref: "User",
     },

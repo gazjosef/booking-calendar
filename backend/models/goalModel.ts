@@ -1,4 +1,4 @@
-import mongoose, { Schema, Model, model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 import Document from "mongoose";
 
 // Define the interface for the document (instance of the model)

@@ -1,5 +1,5 @@
-import mongoose, { Schema, model } from "mongoose";
-import Document from "mongoose";
+import mongoose, { Schema, model, Document } from "mongoose";
+// import Document from "mongoose";
 
 // Define the interface for the document (instance of the model)
 export interface IGoal extends Document {
@@ -13,7 +13,7 @@ export interface IGoal extends Document {
 const goalSchema: Schema<IGoal> = new mongoose.Schema(
   {
     user: {
-      user: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId, // Corrected this line
       required: true,
       ref: "User",
     },

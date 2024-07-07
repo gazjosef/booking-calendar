@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaUser, FaSignInAlt } from "react-icons/fa";
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
   return (
     <nav>
       <ul className="flex items-center space-x-2">
@@ -21,6 +20,4 @@ const Navbar: React.FC = () => {
       </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Calendar, { CalendarProps } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
@@ -6,7 +6,7 @@ type ValuePiece = Date | null;
 
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-const CalendarApp: React.FC = () => {
+export default function CalendarApp() {
   const [value, onChange] = useState<Value>(new Date());
 
   return (
@@ -26,6 +26,4 @@ const CalendarApp: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default CalendarApp;
+}

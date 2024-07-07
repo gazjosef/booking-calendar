@@ -1,12 +1,12 @@
-import { ReactNode } from "react";
+import React from "react";
 import Header from "./Header";
-import Footer from "./Footer.tsx";
+import Footer from "./Footer";
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-full">
       <Header />
@@ -14,6 +14,4 @@ const Layout = ({ children }: LayoutProps) => {
       <Footer />
     </div>
   );
-};
-
-export default Layout;
+}
